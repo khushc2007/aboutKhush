@@ -117,10 +117,10 @@ export function Works() {
         <motion.div
           className="hidden md:block absolute pointer-events-none z-50 w-64 h-40 md:w-80 md:h-48 overflow-hidden rounded-lg"
           style={{
-            x: springX,
-            y: springY,
-            translateX: "-50%",
-            translateY: "-120%",
+            left: springX,
+            top: springY,
+            x: "-50%",
+            y: "-50%",
           }}
           animate={{
             opacity: hoveredIndex !== null ? 1 : 0,
@@ -128,19 +128,19 @@ export function Works() {
           }}
           transition={{ duration: 0.2 }}
         >
-          {hoveredIndex !== null && (
-            <motion.img
-              src={projects[hoveredIndex].image}
-              alt={projects[hoveredIndex].title}
-              className="w-full h-full object-cover"
-              initial={{ scale: 1.2 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.4 }}
+          {/* Pre-render all images, show active one */}
+          {projects.map((project, index) => (
+            <img
+              key={project.title}
+              src={project.image}
+              alt={project.title}
+              className="absolute inset-0 w-full h-full object-cover transition-opacity duration-200"
               style={{
                 filter: "grayscale(50%) contrast(1.1)",
+                opacity: hoveredIndex === index ? 1 : 0,
               }}
             />
-          )}
+          ))}
           {/* Glitch overlay */}
           <div className="absolute inset-0 bg-[#2563eb]/10 mix-blend-overlay" />
         </motion.div>
