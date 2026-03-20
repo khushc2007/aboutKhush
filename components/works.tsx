@@ -9,25 +9,25 @@ const projects = [
   {
     title: "Integrated Wastewater Recovery System",
     tags: ["2026", "Infrastructure", "Process Engineering"],
-    image: "/abstract-neural-network-visualization-dark-theme.jpg",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop",
     year: "2026",
   },
   {
     title: "Low-Power Neural Processing Unit",
     tags: ["2027", "VLSI", "RTL Design"],
-    image: "/futuristic-data-dashboard-dark-minimal.jpg",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
     year: "2027",
   },
   {
     title: "High-Speed SerDes Transceiver IC",
     tags: ["2028", "Analog Mixed-Signal", "CMOS"],
-    image: "/abstract-memory-storage-visualization.jpg",
+    image: "https://images.unsplash.com/photo-1597733336794-12d05021d510?w=800&h=600&fit=crop",
     year: "2028",
   },
   {
     title: "Distributed Fault-Tolerant Backend Mesh",
     tags: ["2029", "Systems", "Go / Rust"],
-    image: "/sound-wave-visualization-dark-theme.jpg",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop",
     year: "2029",
   },
 ]
@@ -120,7 +120,7 @@ export function Works() {
             x: springX,
             y: springY,
             translateX: "-50%",
-            translateY: "-320%",
+            translateY: "-120%",
           }}
           animate={{
             opacity: hoveredIndex !== null ? 1 : 0,
